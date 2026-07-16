@@ -35,9 +35,146 @@
         </nav>
     </header>
 
-    <!-- Page content -->
-    <main class="wrapper">
-        <h1 class="page-title">About Me</h1>
+    <!-- About page content -->
+    <main class="wrapper about-wrapper">
+        <!-- Page introduction -->
+        <section class="about-section about-intro" aria-labelledby="about-title">
+            <p class="section-kicker">About Me</p>
+            <h1 id="about-title">About Me</h1>
+            <p>I am a Software Engineering student at MIVA Open University and a full-stack developer with practical experience building web applications. I currently work as a Software Developer and Operations Lead at Nervego, where I contribute to software projects and support the company’s daily operations.</p>
+        </section>
+
+        <!-- Education journey -->
+        <section class="about-section" aria-labelledby="education-journey-title">
+            <div class="top-header about-heading">
+                <h2 id="education-journey-title">My Education Journey</h2>
+            </div>
+            <ol class="timeline">
+                <li class="timeline-item">
+                    <article class="timeline-card">
+                        <p class="timeline-period">2015 – 2021</p>
+                        <h3>Secondary Education</h3>
+                        <p class="timeline-institution">Royal Kriston College</p>
+                        <p>I completed my secondary education at Royal Kriston College, where I also served as Senior Prefect.</p>
+                    </article>
+                </li>
+                <li class="timeline-item">
+                    <article class="timeline-card">
+                        <p class="timeline-period">July 2024</p>
+                        <h3>Foundations of User Experience (UX) Design</h3>
+                        <p class="timeline-institution">Google through Coursera</p>
+                        <p>I completed a professional course covering the foundations of user experience design.</p>
+                    </article>
+                </li>
+                <li class="timeline-item">
+                    <article class="timeline-card">
+                        <p class="timeline-period">2026 – Present</p>
+                        <h3>BSc Software Engineering</h3>
+                        <p class="timeline-institution">MIVA Open University</p>
+                        <p>I am currently studying Software Engineering and developing a stronger foundation in programming, web technologies, problem-solving and software engineering principles.</p>
+                    </article>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Education table -->
+        <section class="about-section" aria-labelledby="education-table-title">
+            <div class="top-header about-heading">
+                <h2 id="education-table-title">Education and Certifications</h2>
+            </div>
+            <div class="table-wrap">
+                <table class="education-table">
+                    <caption>Summary of my education and professional certification</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Qualification</th>
+                            <th scope="col">Institution or Provider</th>
+                            <th scope="col">Period</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Secondary Education</td>
+                            <td>Royal Kriston College</td>
+                            <td>2015 – 2021</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <td>Foundations of User Experience (UX) Design</td>
+                            <td>Google through Coursera</td>
+                            <td>July 2024</td>
+                            <td>Completed</td>
+                        </tr>
+                        <tr>
+                            <td>BSc Software Engineering</td>
+                            <td>MIVA Open University</td>
+                            <td>2026 – Present</td>
+                            <td>In Progress</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Career aspirations -->
+        <section class="about-section career-layout" aria-labelledby="career-title">
+            <h2 id="career-title">Career Aspirations</h2>
+            <p>My goal is to become a highly skilled software engineer who can design reliable, maintainable and useful applications. I am especially interested in backend development, full-stack web development and software architecture.</p>
+        </section>
+
+        <!-- Technical skills -->
+        <section class="about-section" aria-labelledby="skills-title">
+            <div class="top-header about-heading">
+                <h2 id="skills-title">Technical Skills</h2>
+                <p>These are the main tools and technologies I use across my academic, personal and professional projects.</p>
+            </div>
+            <div class="skills-marquee" aria-label="Technical skills list">
+                <div class="skills-track">
+                    <ul class="skills-group">
+                        <li class="skill-item" tabindex="0"><img src="assets/skills/html5.svg" alt="HTML logo"><span>HTML</span></li>
+                        <li class="skill-item" tabindex="0"><img src="assets/skills/css.svg" alt="CSS logo"><span>CSS</span></li>
+                        <li class="skill-item" tabindex="0"><img src="assets/skills/javascript.svg" alt="JavaScript logo"><span>JavaScript</span></li>
+                        <li class="skill-item" tabindex="0"><img src="assets/skills/Php_light.svg" alt="PHP logo"><span>PHP</span></li>
+                        <li class="skill-item" tabindex="0"><img src="assets/skills/laravel.svg" alt="Laravel logo"><span>Laravel</span></li>
+                        <li class="skill-item" tabindex="0"><img src="assets/skills/vue.svg" alt="Vue.js logo"><span>Vue.js</span></li>
+                        <li class="skill-item" tabindex="0"><img src="assets/skills/inertia.svg" alt="Inertia.js logo"><span>Inertia.js</span></li>
+                        <li class="skill-item" tabindex="0"><img src="assets/skills/tailwindcss.svg" alt="Tailwind CSS logo"><span>Tailwind CSS</span></li>
+                        <li class="skill-item" tabindex="0"><img src="assets/skills/MySQL_wordmark_light.svg" alt="MySQL logo"><span>MySQL</span></li>
+                        <li class="skill-item" tabindex="0"><img src="assets/skills/git.svg" alt="Git logo"><span>Git</span></li>
+                        <li class="skill-item" tabindex="0"><img src="assets/skills/GitHub_light.svg" alt="GitHub logo"><span>GitHub</span></li>
+                    </ul>
+                    <ul class="skills-group" aria-hidden="true">
+                        <li class="skill-item duplicate-skill" tabindex="-1"><img src="assets/skills/html5.svg" alt=""><span>HTML</span></li>
+                        <li class="skill-item duplicate-skill" tabindex="-1"><img src="assets/skills/css.svg" alt=""><span>CSS</span></li>
+                        <li class="skill-item duplicate-skill" tabindex="-1"><img src="assets/skills/javascript.svg" alt=""><span>JavaScript</span></li>
+                        <li class="skill-item duplicate-skill" tabindex="-1"><img src="assets/skills/Php_light.svg" alt=""><span>PHP</span></li>
+                        <li class="skill-item duplicate-skill" tabindex="-1"><img src="assets/skills/laravel.svg" alt=""><span>Laravel</span></li>
+                        <li class="skill-item duplicate-skill" tabindex="-1"><img src="assets/skills/vue.svg" alt=""><span>Vue.js</span></li>
+                        <li class="skill-item duplicate-skill" tabindex="-1"><img src="assets/skills/inertia.svg" alt=""><span>Inertia.js</span></li>
+                        <li class="skill-item duplicate-skill" tabindex="-1"><img src="assets/skills/tailwindcss.svg" alt=""><span>Tailwind CSS</span></li>
+                        <li class="skill-item duplicate-skill" tabindex="-1"><img src="assets/skills/MySQL_wordmark_light.svg" alt=""><span>MySQL</span></li>
+                        <li class="skill-item duplicate-skill" tabindex="-1"><img src="assets/skills/git.svg" alt=""><span>Git</span></li>
+                        <li class="skill-item duplicate-skill" tabindex="-1"><img src="assets/skills/GitHub_light.svg" alt=""><span>GitHub</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies and interests -->
+        <section class="about-section" aria-labelledby="hobbies-title">
+            <div class="top-header about-heading">
+                <h2 id="hobbies-title">Hobbies and Interests</h2>
+            </div>
+            <ul class="hobbies-list">
+                <li>🎮 Playing Video Games</li>
+                <li>⚽ Football</li>
+                <li>🎬 Watching Movies</li>
+                <li>📚 Reading</li>
+                <li>💻 Building Software</li>
+                <li>🧠 Learning New Technologies</li>
+            </ul>
+        </section>
     </main>
 
     <!-- Site footer -->
