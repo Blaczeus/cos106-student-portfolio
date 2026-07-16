@@ -2,14 +2,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 :root {
-    --body-color: rgb(250, 250, 250);
-    --color-white: rgb(255, 255, 255);
-    --text-color: rgb(68, 68, 68);
-    --text-color-muted: rgb(120, 120, 120);
-    --brand-color: rgb(30, 159, 171);
-    --accent-color: rgb(110, 87, 224);
-    --border-color: rgb(232, 232, 232);
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --color-background: #090d0b;
+    --color-background-alt: #0d1310;
+    --color-surface: #111a15;
+    --color-surface-soft: #162019;
+    --color-text: #f2f7f4;
+    --color-muted: #9eaaa3;
+    --color-border: rgba(255, 255, 255, 0.09);
+    --color-primary: #35e78a;
+    --color-primary-strong: #16c96d;
+    --color-primary-soft: rgba(53, 231, 138, 0.12);
+    --color-accent: #a3ff12;
+    --color-glow: rgba(53, 231, 138, 0.32);
+    --body-color: var(--color-background);
+    --color-white: var(--color-text);
+    --text-color: var(--color-text);
+    --text-color-muted: var(--color-muted);
+    --brand-color: var(--color-primary);
+    --accent-color: var(--color-primary);
+    --border-color: var(--color-border);
+    --shadow-color: rgba(0, 0, 0, 0.35);
     --font-main: "Poppins", Arial, sans-serif;
     --max-width: 1100px;
     --header-height: 90px;
@@ -39,7 +51,10 @@ body {
     font-family: var(--font-main);
     line-height: 1.6;
     color: var(--text-color);
-    background: var(--body-color);
+    background:
+        radial-gradient(circle at 20% 10%, rgba(53, 231, 138, 0.09), transparent 28rem),
+        radial-gradient(circle at 85% 22%, rgba(163, 255, 18, 0.035), transparent 22rem),
+        linear-gradient(180deg, var(--color-background), var(--color-background-alt));
 }
 
 a {
@@ -56,7 +71,7 @@ button {
 }
 
 :focus-visible {
-    outline: 3px solid rgba(110, 87, 224, 0.45);
+    outline: 3px solid rgba(163, 255, 18, 0.62);
     outline-offset: 4px;
 }
 
@@ -78,14 +93,17 @@ button {
     z-index: 100;
     width: 100%;
     height: var(--header-height);
-    background: var(--body-color);
-    transition: height 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    transition: height 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .site-header.header-scrolled {
     height: var(--header-height-scrolled);
-    background: rgba(250, 250, 250, 0.96);
-    box-shadow: 0 1px 6px var(--shadow-color);
+    background: rgba(9, 13, 11, 0.82);
+    border-bottom-color: var(--border-color);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(16px);
 }
 
 .site-nav {
@@ -117,7 +135,7 @@ button {
     font-size: 3.35rem;
     font-weight: 700;
     line-height: 1;
-    color: var(--text-color);
+    color: var(--color-accent);
 }
 
 .nav-menu,
@@ -141,14 +159,14 @@ button {
     min-height: 2.75rem;
     padding-inline: 15px;
     margin-inline: 14px;
-    color: var(--text-color);
+    color: var(--color-muted);
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-link:hover,
 .active-link {
-    color: var(--accent-color);
+    color: var(--color-primary);
 }
 
 .active-link {
@@ -164,7 +182,8 @@ button {
     height: 5px;
     transform: translateX(-50%);
     border-radius: 50%;
-    background: var(--accent-color);
+    background: var(--color-primary);
+    box-shadow: 0 0 10px var(--color-glow);
 }
 
 .nav-menu-btn {
@@ -178,14 +197,14 @@ button {
     border: 1px solid transparent;
     border-radius: var(--radius-sm);
     background: transparent;
-    color: var(--text-color);
+    color: var(--color-text);
     cursor: pointer;
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-menu-btn:hover {
     border-color: var(--border-color);
-    background: var(--color-white);
+    background: var(--color-primary-soft);
 }
 
 .nav-menu-btn span {
@@ -212,14 +231,15 @@ button {
     width: 52%;
 }
 
-.hero-label {
+.hero-label,
+.section-kicker {
     display: inline-flex;
     align-items: center;
     margin-bottom: var(--space-md);
     padding: 3px 10px;
     border-radius: 5px;
-    color: var(--color-white);
-    background: var(--brand-color);
+    color: var(--color-background);
+    background: var(--color-primary);
     font-size: 12px;
     font-weight: 500;
 }
@@ -235,7 +255,7 @@ button {
 
 .hero-welcome {
     margin-bottom: var(--space-sm);
-    color: var(--accent-color);
+    color: var(--color-primary);
     font-size: 1.2rem;
     font-weight: 600;
 }
@@ -266,23 +286,24 @@ button {
 }
 
 .primary-button {
-    color: var(--color-white);
-    background: var(--accent-color);
-    box-shadow: 0 8px 18px rgba(110, 87, 224, 0.2);
+    color: var(--color-background);
+    background: var(--color-primary);
+    box-shadow: 0 0 22px rgba(53, 231, 138, 0.18);
 }
 
 .primary-button:hover {
-    background: var(--brand-color);
+    background: var(--color-accent);
 }
 
 .secondary-button {
     color: var(--text-color);
-    background: rgb(239, 239, 239);
+    border: 1px solid var(--border-color);
+    background: var(--color-surface-soft);
 }
 
 .secondary-button:hover {
-    color: var(--color-white);
-    background: var(--brand-color);
+    color: var(--color-background);
+    background: var(--color-primary);
 }
 
 .hero-image-area {
@@ -299,8 +320,9 @@ button {
     min-height: 260px;
     overflow: hidden;
     border-radius: 55% 45% 55% 45%;
-    background: var(--color-white);
-    box-shadow: 0 18px 35px var(--shadow-color);
+    border: 1px solid rgba(53, 231, 138, 0.18);
+    background: var(--color-surface);
+    box-shadow: 0 0 45px rgba(53, 231, 138, 0.14), 0 24px 45px rgba(0, 0, 0, 0.38);
     animation: imageFloat 7s ease-in-out infinite;
 }
 
@@ -363,17 +385,7 @@ button {
 
 .about-intro {
     max-width: 820px;
-}
-
-.section-kicker {
-    display: inline-flex;
-    margin-bottom: var(--space-md);
-    padding: 3px 10px;
-    border-radius: 5px;
-    color: var(--color-white);
-    background: var(--brand-color);
-    font-size: 12px;
-    font-weight: 500;
+    margin-right: auto;
 }
 
 .about-intro h1 {
@@ -405,7 +417,7 @@ button {
     left: 50%;
     width: 2px;
     transform: translateX(-50%);
-    background: var(--border-color);
+    background: linear-gradient(180deg, transparent, rgba(53, 231, 138, 0.5), transparent);
 }
 
 .timeline-item {
@@ -423,10 +435,10 @@ button {
     width: 14px;
     height: 14px;
     transform: translateX(-50%);
-    border: 3px solid var(--body-color);
+    border: 3px solid var(--color-background);
     border-radius: 50%;
-    background: var(--accent-color);
-    box-shadow: 0 0 0 4px rgba(110, 87, 224, 0.14);
+    background: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(53, 231, 138, 0.12), 0 0 18px rgba(53, 231, 138, 0.2);
     z-index: 1;
 }
 
@@ -434,7 +446,7 @@ button {
     padding: 1.5rem;
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    background: rgba(255, 255, 255, 0.58);
+    background: rgba(17, 26, 21, 0.58);
 }
 
 .timeline-item:nth-child(odd) .timeline-card {
@@ -450,8 +462,8 @@ button {
     margin-bottom: var(--space-md);
     padding: 0.35rem 0.75rem;
     border-radius: 999px;
-    color: var(--accent-color);
-    background: rgba(110, 87, 224, 0.1);
+    color: var(--color-primary);
+    background: var(--color-primary-soft);
     font-size: 0.9rem;
     font-weight: 600;
 }
@@ -472,8 +484,8 @@ button {
     overflow-x: auto;
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    background: var(--color-white);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.045);
+    background: var(--color-surface);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.18);
 }
 
 .education-table {
@@ -500,7 +512,7 @@ button {
 .education-table th {
     color: var(--text-color);
     font-weight: 600;
-    background: rgba(30, 159, 171, 0.08);
+    background: var(--color-primary-soft);
 }
 
 .education-table tbody tr:last-child td {
@@ -537,12 +549,12 @@ button {
 
 .skills-marquee::before {
     left: 0;
-    background: linear-gradient(to right, var(--body-color), rgba(250, 250, 250, 0));
+    background: linear-gradient(to right, var(--body-color), rgba(9, 13, 11, 0));
 }
 
 .skills-marquee::after {
     right: 0;
-    background: linear-gradient(to left, var(--body-color), rgba(250, 250, 250, 0));
+    background: linear-gradient(to left, var(--body-color), rgba(9, 13, 11, 0));
 }
 
 .skills-track {
@@ -574,7 +586,7 @@ button {
     padding: 0.7rem 1rem;
     border: 1px solid var(--border-color);
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.64);
+    background: rgba(22, 32, 25, 0.74);
     color: var(--text-color);
     font-weight: 600;
 }
@@ -608,7 +620,7 @@ button {
     padding: 0.85rem 1.1rem;
     border: 1px solid var(--border-color);
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.58);
+    background: rgba(22, 32, 25, 0.62);
     color: var(--text-color);
     font-weight: 600;
     text-align: center;
@@ -622,7 +634,8 @@ button {
     flex-direction: column;
     row-gap: 24px;
     padding-block: 40px 50px;
-    background: rgb(248, 248, 248);
+    border-top: 1px solid var(--border-color);
+    background: var(--color-background-alt);
 }
 
 .top-footer p {
@@ -640,14 +653,14 @@ button {
 }
 
 .footer_menu_list a {
-    color: var(--text-color);
+    color: var(--color-muted);
     font-weight: 500;
     margin-inline: 20px;
     transition: color 0.3s ease;
 }
 
 .footer_menu_list a:hover {
-    color: var(--accent-color);
+    color: var(--color-primary);
 }
 
 .bottom-footer {
@@ -668,7 +681,8 @@ button {
         height: calc(100vh - var(--header-height));
         justify-content: center;
         align-items: center;
-        background: rgba(255, 255, 255, 0.82);
+        border-top: 1px solid var(--border-color);
+        background: rgba(9, 13, 11, 0.9);
         backdrop-filter: blur(20px);
         transition: left 0.3s ease, top 0.3s ease, height 0.3s ease;
     }
