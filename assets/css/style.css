@@ -534,27 +534,8 @@ button {
     max-width: 100%;
     overflow: hidden;
     padding-block: var(--space-sm);
-}
-
-.skills-marquee::before,
-.skills-marquee::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    z-index: 1;
-    width: 6rem;
-    height: 100%;
-    pointer-events: none;
-}
-
-.skills-marquee::before {
-    left: 0;
-    background: linear-gradient(to right, var(--body-color), rgba(9, 13, 11, 0));
-}
-
-.skills-marquee::after {
-    right: 0;
-    background: linear-gradient(to left, var(--body-color), rgba(9, 13, 11, 0));
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 7rem, #000 calc(100% - 7rem), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, #000 7rem, #000 calc(100% - 7rem), transparent 100%);
 }
 
 .skills-track {
@@ -814,9 +795,9 @@ button {
         margin-bottom: 2rem;
     }
 
-    .skills-marquee::before,
-    .skills-marquee::after {
-        width: 3rem;
+    .skills-marquee {
+        -webkit-mask-image: linear-gradient(to right, transparent 0, #000 3rem, #000 calc(100% - 3rem), transparent 100%);
+        mask-image: linear-gradient(to right, transparent 0, #000 3rem, #000 calc(100% - 3rem), transparent 100%);
     }
 
     .hobbies-list {
