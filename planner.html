@@ -35,9 +35,70 @@
         </nav>
     </header>
 
-    <!-- Page content -->
-    <main class="wrapper">
-        <h1 class="page-title">Academic Planner</h1>
+    <!-- Academic planner content -->
+    <main class="wrapper planner-wrapper">
+        <!-- Planner introduction -->
+        <section class="planner-intro" aria-labelledby="planner-title">
+            <p class="section-kicker">Stay Organised</p>
+            <h1 id="planner-title">Academic Planner</h1>
+            <p>Use this planner to keep track of assignments, study goals and other academic tasks.</p>
+        </section>
+
+        <!-- Planner form and summary -->
+        <section class="planner-panel" aria-label="Task planner controls">
+            <form class="task-form" id="task-form" novalidate>
+                <div class="form-field">
+                    <label for="task-title">Task Title</label>
+                    <input type="text" id="task-title" name="taskTitle" placeholder="e.g. Complete COS 106 project">
+                </div>
+                <div class="form-field">
+                    <label for="task-course">Course or Subject</label>
+                    <input type="text" id="task-course" name="taskCourse" placeholder="e.g. COS 106">
+                </div>
+                <div class="form-field">
+                    <label for="task-due-date">Due Date</label>
+                    <input type="date" id="task-due-date" name="taskDueDate">
+                </div>
+                <div class="form-field">
+                    <label for="task-priority">Priority</label>
+                    <select id="task-priority" name="taskPriority">
+                        <option value="">Select priority</option>
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+                <p class="form-message" id="task-form-message" aria-live="polite"></p>
+                <button class="planner-button" type="submit">Add Task</button>
+            </form>
+
+            <div class="task-summary" aria-label="Task summary">
+                <div class="summary-item">
+                    <span>Total Tasks</span>
+                    <strong id="total-tasks">0</strong>
+                </div>
+                <div class="summary-item">
+                    <span>Completed</span>
+                    <strong id="completed-tasks">0</strong>
+                </div>
+                <div class="summary-item">
+                    <span>Remaining</span>
+                    <strong id="remaining-tasks">0</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task list -->
+        <section class="task-section" aria-labelledby="task-list-title">
+            <div class="task-section-heading">
+                <h2 id="task-list-title">Tasks</h2>
+            </div>
+            <div class="empty-state" id="empty-state">
+                <h3>No tasks yet</h3>
+                <p>Add your first academic task using the form above.</p>
+            </div>
+            <ul class="task-list" id="task-list" aria-live="polite"></ul>
+        </section>
     </main>
 
     <!-- Site footer -->
@@ -60,5 +121,6 @@
     </footer>
 
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/planner.js"></script>
 </body>
 </html>
