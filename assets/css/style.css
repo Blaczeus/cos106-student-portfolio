@@ -396,7 +396,7 @@ button {
     line-height: 1.1;
 }
 
-.about-intro p,
+.about-intro p:not(.section-kicker),
 .career-layout p,
 .timeline-card p {
     color: var(--text-color-muted);
