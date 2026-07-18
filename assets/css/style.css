@@ -108,6 +108,113 @@ button {
     padding: calc(var(--header-height) + 4rem) 0 4rem;
 }
 
+.reveal-item {
+    opacity: 0;
+    transform: translateY(42px);
+    transition: opacity 0.85s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.85s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-from-top {
+    transform: translateY(-38px);
+}
+
+.reveal-from-left {
+    transform: translateX(-42px);
+}
+
+.reveal-from-right {
+    transform: translateX(42px);
+}
+
+.reveal-item.is-visible {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+@keyframes entranceFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-34px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes entranceFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(42px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes entranceFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(46px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.home-hero .hero-label,
+.home-hero h1,
+.home-hero .hero-welcome,
+.home-hero .hero-bio,
+.home-hero .hero-actions,
+.home-hero .hero-socials,
+.home-hero .hero-image-area {
+    animation-duration: 0.9s;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.home-hero .hero-label {
+    animation-name: entranceFromTop;
+    animation-delay: 0.08s;
+}
+
+.home-hero h1 {
+    animation-name: entranceFromBottom;
+    animation-delay: 0.2s;
+}
+
+.home-hero .hero-welcome {
+    animation-name: entranceFromBottom;
+    animation-delay: 0.34s;
+}
+
+.home-hero .hero-bio {
+    animation-name: entranceFromBottom;
+    animation-delay: 0.48s;
+}
+
+.home-hero .hero-actions {
+    animation-name: entranceFromBottom;
+    animation-delay: 0.62s;
+}
+
+.home-hero .hero-socials {
+    animation-name: entranceFromBottom;
+    animation-delay: 0.76s;
+}
+
+.home-hero .hero-image-area {
+    animation-name: entranceFromRight;
+    animation-delay: 0.42s;
+}
+
 /* Header and navigation */
 .site-header {
     position: fixed;
@@ -1664,6 +1771,21 @@ button {
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .home-hero .hero-label,
+    .home-hero h1,
+    .home-hero .hero-welcome,
+    .home-hero .hero-bio,
+    .home-hero .hero-actions,
+    .home-hero .hero-socials,
+    .home-hero .hero-image-area,
+    .reveal-item {
+        opacity: 1;
+        transform: none;
+        animation: none;
+        transition: none;
+        will-change: auto;
+    }
+
     .skills-track {
         width: auto;
         flex-wrap: wrap;

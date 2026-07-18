@@ -54,3 +54,59 @@ function updateHeaderState() {
 
 updateHeaderState();
 window.addEventListener("scroll", updateHeaderState);
+
+// Page entrance and scroll reveal animations
+const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+function revealElement(element) {
+    element.classList.add("is-visible");
+    element.style.transitionDelay = "";
+}
+
+function setupScrollReveal() {
+    if (reducedMotionQuery.matches || !("IntersectionObserver" in window)) {
+        return;
+    }
+
+    const revealGroups = [
+        { selector: ".about-intro, .projects-intro, .planner-intro, .contact-intro", direction: "top" },
+        { selector: ".timeline, .contact-details", direction: "left" },
+        { selector: ".table-wrap, .skills-marquee, .hobbies-list, .task-section, .contact-options, .site-footer", direction: "bottom" },
+        { selector: ".project-showcase .project-row:nth-child(odd), .planner-panel", direction: "left" },
+        { selector: ".project-showcase .project-row:nth-child(even), .contact-form", direction: "right" },
+    ];
+
+    const revealItems = [];
+
+    revealGroups.forEach(function (group) {
+        document.querySelectorAll(group.selector).forEach(function (item) {
+            item.classList.add("reveal-item", `reveal-from-${group.direction}`);
+            revealItems.push(item);
+        });
+    });
+
+    if (!revealItems.length) {
+        return;
+    }
+
+    const revealObserver = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+            if (!entry.isIntersecting) {
+                return;
+            }
+
+            revealElement(entry.target);
+            observer.unobserve(entry.target);
+        });
+    }, {
+        threshold: 0.22,
+        rootMargin: "0px 0px -4% 0px",
+    });
+
+    revealItems.forEach(function (item, index) {
+        item.style.transitionDelay = `${Math.min((index % 4) * 130, 390)}ms`;
+        revealObserver.observe(item);
+    });
+}
+
+setupScrollReveal();
