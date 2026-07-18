@@ -194,13 +194,7 @@
         const taskContent = document.createElement("div");
         taskContent.className = "task-content";
 
-        const titleRow = document.createElement("div");
-        titleRow.className = "task-title-row";
-
         const title = createTextElement("h3", "task-title", task.title);
-        const state = createTextElement("span", "task-state", task.completed ? "Completed" : "Pending");
-
-        titleRow.append(title, state);
 
         const meta = document.createElement("div");
         meta.className = "task-meta";
@@ -208,12 +202,16 @@
         const course = createTextElement("span", "task-course", task.course);
         const dueDate = document.createElement("time");
         dueDate.dateTime = task.dueDate;
-        dueDate.textContent = formatDueDate(task.dueDate);
+        dueDate.textContent = `Due ${formatDueDate(task.dueDate)}`;
 
+        const badges = document.createElement("div");
+        badges.className = "task-badges";
         const priority = createTextElement("span", "priority-label", `${task.priority} Priority`);
+        const state = createTextElement("span", "task-state", task.completed ? "Completed" : "Pending");
 
-        meta.append(course, dueDate, priority);
-        taskContent.append(titleRow, meta);
+        meta.append(course, dueDate);
+        badges.append(priority, state);
+        taskContent.append(title, meta, badges);
 
         const taskActions = document.createElement("div");
         taskActions.className = "task-actions";
