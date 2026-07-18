@@ -1,6 +1,6 @@
 # Student Portfolio & Academic Planner
 
-This is my **COS 106 – Introduction to Web Technologies** term project at **MIVA Open University**.
+This is my **COS 106 – Introduction to Web Technologies** 1st semester project at **MIVA Open University**.
 
 I wanted to build something more than just a simple portfolio, so I combined my personal portfolio with a small academic planner where tasks can be added, completed and managed using JavaScript and Local Storage.
 
@@ -25,7 +25,7 @@ I wanted to build something more than just a simple portfolio, so I combined my 
 Clone the project
 
 ```bash
-git clone https://github.com/Blaczeus/<repository-name>.git
+git clone https://github.com/Blaczeus/cos106-student-portfolio.git
 ```
 
 Then simply open `index.html` in your browser, or use a local server like Live Server.
