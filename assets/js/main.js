@@ -3,19 +3,30 @@ const navMenu = document.querySelector(".nav-menu");
 const navMenuButton = document.querySelector(".nav-menu-btn");
 const navLinks = document.querySelectorAll(".nav-link");
 
+function updateMobileMenuButton(isOpen) {
+    if (!navMenuButton) {
+        return;
+    }
+
+    navMenuButton.setAttribute("aria-expanded", String(isOpen));
+    navMenuButton.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+}
+
 function closeMobileMenu() {
     if (!navMenu || !navMenuButton) {
         return;
     }
 
     navMenu.classList.remove("responsive");
-    navMenuButton.setAttribute("aria-expanded", "false");
+    updateMobileMenuButton(false);
 }
 
 if (navMenu && navMenuButton) {
+    updateMobileMenuButton(false);
+
     navMenuButton.addEventListener("click", function () {
         const isOpen = navMenu.classList.toggle("responsive");
-        navMenuButton.setAttribute("aria-expanded", String(isOpen));
+        updateMobileMenuButton(isOpen);
     });
 
     navLinks.forEach(function (link) {
