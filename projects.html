@@ -13,8 +13,11 @@
     <header class="site-header" id="header">
         <nav class="site-nav" aria-label="Main navigation">
             <a class="nav-logo" href="index.html" aria-label="Anya home">
-                <span class="nav-name">Anya</span>
-                <span class="nav-dot" aria-hidden="true">.</span>
+                <span class="nav-brand-line">
+                    <span class="nav-name">Anya</span>
+                    <span class="nav-dot" aria-hidden="true">.</span>
+                </span>
+                <span class="nav-tagline">Building software that matters.</span>
             </a>
 
             <div class="nav-menu" id="site-navigation">
@@ -41,69 +44,71 @@
         <section class="projects-intro" aria-labelledby="projects-title">
             <p class="section-kicker">Selected Work</p>
             <h1 id="projects-title">Projects</h1>
-            <p>This is a selection of active and completed projects that reflect my experience across full-stack web development, mobile applications and product design.</p>
+            <p>A selection of web and mobile applications I have designed and developed, showing my work across full-stack development, responsive interfaces, product thinking, and practical problem-solving.</p>
         </section>
 
         <!-- Project showcase -->
         <section class="project-showcase" aria-label="Project showcase">
             <article class="project-row project-featured">
                 <div class="project-media">
-                    <div class="project-placeholder" role="img" aria-label="Screenshot of the Nerv Ballot voting platform">
-                        <span>Project screenshot coming soon</span>
-                    </div>
+                    <img class="project-image web-project-image" src="assets/images/projects/nerv-ballot-home.png" alt="Nerv Ballot voting platform homepage" width="1917" height="1078" decoding="async">
                 </div>
                 <div class="project-info">
                     <div class="project-meta">
                         <p>Full-Stack Web Application</p>
                     </div>
                     <h2>Nerv Ballot</h2>
-                    <span class="project-status">In Development</span>
-                    <p>Nerv Ballot is a digital voting platform designed to manage contests, contestants and structured voting processes. The project focuses on reliable backend logic, clear administrative workflows and a straightforward voting experience.</p>
+                    <span class="project-status status-development">In Development</span>
+                    <p>A voting platform for running online contests and elections. It supports contestant registration, public voting, administrative workflows, and structured election management through a Laravel and Vue-based system.</p>
                     <ul class="project-tech-list" aria-label="Technologies used for Nerv Ballot">
                         <li><img src="assets/skills/laravel.svg" alt="" aria-hidden="true"><span>Laravel</span></li>
-                        <li><img src="assets/skills/vue.svg" alt="" aria-hidden="true"><span>Vue.js</span></li>
-                        <li><img src="assets/skills/inertia.svg" alt="" aria-hidden="true"><span>Inertia.js</span></li>
+                        <li><img src="assets/skills/vue.svg" alt="" aria-hidden="true"><span>Vue</span></li>
+                        <li><img src="assets/skills/inertia.svg" alt="" aria-hidden="true"><span>Inertia</span></li>
                         <li><img src="assets/skills/MySQL_wordmark_dark.svg" alt="" aria-hidden="true"><span>MySQL</span></li>
                         <li><img src="assets/skills/tailwindcss.svg" alt="" aria-hidden="true"><span>Tailwind CSS</span></li>
                     </ul>
+                    <span class="ownership-badge">Lead Developer</span>
                     <div class="project-links">
-                        <span class="project-link unavailable">Repository Private</span>
-                        <span class="project-link unavailable">Link Coming Soon</span>
+                        <span class="project-link unavailable private-repository-label" aria-label="Private Company Repository">
+                            <span class="project-lock-icon" aria-hidden="true"></span>
+                            <span>Private Company Repository</span>
+                        </span>
                     </div>
                 </div>
             </article>
 
             <article class="project-row project-row-reverse">
                 <div class="project-media">
-                    <div class="project-placeholder" role="img" aria-label="Screenshot of the School CMS institutional website">
-                        <span>Project screenshot coming soon</span>
-                    </div>
+                    <img class="project-image web-project-image" src="assets/images/projects/student-portfolio-home.png" alt="Student portfolio homepage" width="1917" height="1018" loading="lazy" decoding="async">
                 </div>
                 <div class="project-info">
                     <div class="project-meta">
-                        <p>Institutional Website and Content Management System</p>
+                        <p>Responsive Web Application</p>
                     </div>
-                    <h2>School CMS</h2>
-                    <span class="project-status">Frontend Integration in Progress</span>
-                    <p>School CMS is an institutional website and content management project designed to present faculties, departments, courses, news and other school information. The current work focuses on integrating and stabilising the public-facing frontend within a Laravel and Vue.js application.</p>
-                    <ul class="project-tech-list" aria-label="Technologies used for School CMS">
-                        <li><img src="assets/skills/laravel.svg" alt="" aria-hidden="true"><span>Laravel</span></li>
-                        <li><img src="assets/skills/vue.svg" alt="" aria-hidden="true"><span>Vue.js</span></li>
-                        <li><img src="assets/skills/inertia.svg" alt="" aria-hidden="true"><span>Inertia.js</span></li>
-                        <li><img src="assets/skills/MySQL_wordmark_dark.svg" alt="" aria-hidden="true"><span>MySQL</span></li>
-                        <li><img src="assets/skills/tailwindcss.svg" alt="" aria-hidden="true"><span>Tailwind CSS</span></li>
+                    <h2>Student Portfolio</h2>
+                    <span class="project-status status-development">In Progress</span>
+                    <p>A responsive student portfolio and academic management website created for my university coursework. It presents my profile, skills, academic work, projects, and includes an interactive academic planner.</p>
+                    <ul class="project-tech-list" aria-label="Technologies used for Student Portfolio">
+                        <li><img src="assets/skills/html5.svg" alt="" aria-hidden="true"><span>HTML5</span></li>
+                        <li><img src="assets/skills/css.svg" alt="" aria-hidden="true"><span>CSS3</span></li>
+                        <li><img src="assets/skills/javascript.svg" alt="" aria-hidden="true"><span>JavaScript</span></li>
+                        <li><span>Local Storage</span></li>
+                        <li><span>Responsive Design</span></li>
                     </ul>
+                    <span class="ownership-badge">Solo Project</span>
                     <div class="project-links">
-                        <span class="project-link unavailable">Repository Private</span>
-                        <span class="project-link unavailable">Link Coming Soon</span>
+                        <a class="project-link primary-project-link" href="https://github.com/Blaczeus/cos106-student-portfolio" target="_blank" rel="noopener noreferrer" aria-label="View code for Student Portfolio on GitHub">View Code</a>
+                        <span class="project-link unavailable">Live Link Coming Soon</span>
                     </div>
                 </div>
             </article>
 
             <article class="project-row">
                 <div class="project-media mobile-media">
-                    <div class="project-placeholder" role="img" aria-label="Mobile screens from the HomeHub application">
-                        <span>Project screenshot coming soon</span>
+                    <div class="mobile-preview-gallery" aria-label="HomeHub mobile application screenshots">
+                        <img class="mobile-preview-image" src="assets/images/projects/homehub-splash.jpg" alt="HomeHub splash screen" width="720" height="1546" loading="lazy" decoding="async">
+                        <img class="mobile-preview-image featured-preview" src="assets/images/projects/homehub-browse-properties.jpg" alt="HomeHub property browsing screen" width="720" height="1541" loading="lazy" decoding="async">
+                        <img class="mobile-preview-image" src="assets/images/projects/homehub-property-details.jpg" alt="HomeHub property details screen" width="720" height="1540" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="project-info">
@@ -111,52 +116,109 @@
                         <p>Mobile Application</p>
                     </div>
                     <h2>HomeHub</h2>
-                    <span class="project-status">Completed &middot; Demo Offline</span>
-                    <p>HomeHub is a mobile application project developed to explore property and home-related experiences on mobile devices. The project includes a complete mobile interface and demonstrates my experience working with mobile application structure, navigation and responsive screen design.</p>
+                    <span class="project-status status-offline">Completed — Demo Offline</span>
+                    <p>A mobile property marketplace concept designed to help users discover homes, rentals, and accommodation opportunities through a clean and structured mobile experience.</p>
                     <ul class="project-tech-list" aria-label="Technologies used for HomeHub">
                         <li><img src="assets/skills/reactnative-wordmark.svg" alt="" aria-hidden="true"><span>React Native</span></li>
+                        <li><img src="assets/skills/expo.svg" alt="" aria-hidden="true"><span>Expo</span></li>
                         <li><img src="assets/skills/javascript.svg" alt="" aria-hidden="true"><span>JavaScript</span></li>
                         <li><span>Mobile UI Development</span></li>
                     </ul>
+                    <span class="ownership-badge">Solo Project</span>
                     <div class="project-links">
-                        <span class="project-link unavailable">Repository Private</span>
-                        <span class="project-link unavailable">Demo Offline</span>
+                        <a class="project-link primary-project-link" href="https://github.com/Blaczeus/HomeHub" target="_blank" rel="noopener noreferrer" aria-label="View code for HomeHub on GitHub">View Code</a>
+                        <span class="project-note-badge">Demo Offline</span>
                     </div>
                 </div>
             </article>
 
             <article class="project-row project-row-reverse">
                 <div class="project-media mobile-media">
-                    <div class="project-placeholder" role="img" aria-label="Mobile screens from the Corexpert fitness application">
-                        <span>Project screenshot coming soon</span>
+                    <div class="mobile-preview-gallery" aria-label="Corexpert mobile application screenshots">
+                        <img class="mobile-preview-image" src="assets/images/projects/corexpert-splash.jpg" alt="Corexpert splash screen" width="720" height="1527" loading="lazy" decoding="async">
+                        <img class="mobile-preview-image featured-preview" src="assets/images/projects/corexpert-home.jpg" alt="Corexpert home screen" width="720" height="1590" loading="lazy" decoding="async">
+                        <img class="mobile-preview-image" src="assets/images/projects/corexpert-action.jpg" alt="Corexpert action screen" width="720" height="1584" loading="lazy" decoding="async">
                     </div>
                 </div>
                 <div class="project-info">
                     <div class="project-meta">
-                        <p>Fitness Mobile Application</p>
+                        <p>Finance Mobile Application</p>
                     </div>
                     <h2>Corexpert</h2>
-                    <span class="project-status">Completed &middot; Demo Offline</span>
-                    <p>Corexpert is a fitness application built with Expo and React Native. It provides access to exercise information and was developed to practise mobile interface design, navigation and application organisation.</p>
+                    <span class="project-status status-offline">Completed — Demo Offline</span>
+                    <p>A finance-focused mobile application interface built with Expo and React Native. It explores structured financial service flows, responsive mobile screens, and user-friendly navigation.</p>
                     <ul class="project-tech-list" aria-label="Technologies used for Corexpert">
                         <li><img src="assets/skills/reactnative-wordmark.svg" alt="" aria-hidden="true"><span>React Native</span></li>
                         <li><img src="assets/skills/expo.svg" alt="" aria-hidden="true"><span>Expo</span></li>
                         <li><img src="assets/skills/javascript.svg" alt="" aria-hidden="true"><span>JavaScript</span></li>
                         <li><span>Mobile UI Development</span></li>
                     </ul>
+                    <span class="ownership-badge">Solo Project</span>
                     <div class="project-links">
-                        <span class="project-link unavailable">Repository Private</span>
-                        <span class="project-link unavailable">Demo Offline</span>
+                        <a class="project-link primary-project-link" href="https://github.com/Blaczeus/corexpert" target="_blank" rel="noopener noreferrer" aria-label="View code for Corexpert on GitHub">View Code</a>
+                        <span class="project-note-badge">Demo Offline</span>
                     </div>
                 </div>
             </article>
+
+            <article class="project-row">
+                <div class="project-media mobile-media">
+                    <div class="mobile-preview-gallery" aria-label="PixVault mobile photo application screenshots">
+                        <img class="mobile-preview-image" src="assets/images/projects/pixvault-splash.jpg" alt="PixVault splash screen" width="720" height="1583" loading="lazy" decoding="async">
+                        <img class="mobile-preview-image featured-preview" src="assets/images/projects/pixvault-home.jpg" alt="PixVault image browsing screen" width="720" height="1585" loading="lazy" decoding="async">
+                        <img class="mobile-preview-image" src="assets/images/projects/pixvault-view.jpg" alt="PixVault image preview screen" width="720" height="1586" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div class="project-info">
+                    <div class="project-meta">
+                        <p>Mobile Image Application</p>
+                    </div>
+                    <h2>PixVault</h2>
+                    <span class="project-status status-completed">Completed</span>
+                    <p>A mobile wallpaper application that uses the Pixabay API to help users browse, download, and share high-quality backgrounds through a simple and responsive interface.</p>
+                    <ul class="project-tech-list" aria-label="Technologies used for PixVault">
+                        <li><img src="assets/skills/reactnative-wordmark.svg" alt="" aria-hidden="true"><span>React Native</span></li>
+                        <li><img src="assets/skills/expo.svg" alt="" aria-hidden="true"><span>Expo</span></li>
+                        <li><img src="assets/skills/javascript.svg" alt="" aria-hidden="true"><span>JavaScript</span></li>
+                        <li><span>Pixabay API</span></li>
+                        <li><img src="assets/skills/tailwindcss.svg" alt="" aria-hidden="true"><span>Tailwind CSS</span></li>
+                    </ul>
+                    <span class="ownership-badge">Solo Project</span>
+                    <div class="project-links">
+                        <a class="project-link primary-project-link" href="https://github.com/Blaczeus/PixVault" target="_blank" rel="noopener noreferrer" aria-label="View code for PixVault on GitHub">View Code</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Portfolio walkthrough video -->
+        <section class="portfolio-walkthrough" aria-labelledby="walkthrough-title">
+            <div class="walkthrough-content">
+                <p class="section-kicker">Portfolio Demo</p>
+                <h2 id="walkthrough-title">Portfolio Walkthrough</h2>
+                <p>A short walkthrough of the portfolio, including the project pages, academic planner, and contact form interactions.</p>
+            </div>
+
+            <div class="walkthrough-video-frame">
+                <video class="walkthrough-video" controls preload="metadata" playsinline>
+                    <source src="assets/media/portfolio-walkthrough.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                </video>
+                <p class="walkthrough-status">Walkthrough coming soon</p>
+            </div>
         </section>
     </main>
 
     <!-- Site footer -->
     <footer class="site-footer">
         <div class="top-footer">
-            <p>Anya Chidiebere Joshua</p>
+            <a class="footer-logo" href="index.html" aria-label="Anya home">
+                <span class="nav-brand-line">
+                    <span class="nav-name">Anya</span>
+                    <span class="nav-dot" aria-hidden="true">.</span>
+                </span>
+                <span class="nav-tagline">Building software that matters.</span>
+            </a>
         </div>
         <nav class="middle-footer" aria-label="Footer navigation">
             <ul class="footer-menu">
@@ -168,7 +230,7 @@
             </ul>
         </nav>
         <div class="bottom-footer">
-            <p>&copy; 2026 Anya Chidiebere Joshua. All rights reserved.</p>
+            <p>&copy; 2026 Anya Chidiebere. All rights reserved.</p>
         </div>
     </footer>
 
