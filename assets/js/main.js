@@ -71,7 +71,7 @@ function setupScrollReveal() {
     const revealGroups = [
         { selector: ".about-intro, .projects-intro, .planner-intro, .contact-intro", direction: "top" },
         { selector: ".timeline, .contact-details", direction: "left" },
-        { selector: ".table-wrap, .skills-marquee, .hobbies-list, .task-section, .contact-options, .site-footer", direction: "bottom" },
+        { selector: ".table-wrap, .skills-marquee, .hobbies-list, .task-section, .contact-options, .portfolio-walkthrough, .site-footer", direction: "bottom" },
         { selector: ".project-showcase .project-row:nth-child(odd), .planner-panel", direction: "left" },
         { selector: ".project-showcase .project-row:nth-child(even), .contact-form", direction: "right" },
     ];
