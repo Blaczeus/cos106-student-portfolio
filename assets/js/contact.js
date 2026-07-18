@@ -5,16 +5,21 @@
     const contactForm = document.querySelector("#contact-form");
     const nameInput = document.querySelector("#contact-name");
     const emailInput = document.querySelector("#contact-email");
+    const phoneInput = document.querySelector("#contact-phone");
     const subjectInput = document.querySelector("#contact-subject");
     const messageInput = document.querySelector("#contact-message");
     const formMessage = document.querySelector("#contact-form-message");
 
-    if (!contactForm || !nameInput || !emailInput || !subjectInput || !messageInput || !formMessage) {
+    if (!contactForm || !nameInput || !emailInput || !phoneInput || !subjectInput || !messageInput || !formMessage) {
         return;
     }
 
     function isValidEmail(email) {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function isValidPhoneNumber(phoneNumber) {
+        return /^\+?\d+$/.test(phoneNumber);
     }
 
     function showFormMessage(message, type) {
@@ -28,7 +33,7 @@
     }
 
     function clearFieldErrors() {
-        [nameInput, emailInput, subjectInput, messageInput].forEach((field) => {
+        [nameInput, emailInput, phoneInput, subjectInput, messageInput].forEach((field) => {
             setFieldError(field, false);
         });
     }
@@ -36,6 +41,7 @@
     function validateContactForm() {
         const name = nameInput.value.trim();
         const email = emailInput.value.trim();
+        const phone = phoneInput.value.trim();
         const subject = subjectInput.value.trim();
         const message = messageInput.value.trim();
 
@@ -70,6 +76,22 @@
                 isValid: false,
                 field: emailInput,
                 message: "Please enter a valid email address.",
+            };
+        }
+
+        if (!phone) {
+            return {
+                isValid: false,
+                field: phoneInput,
+                message: "Please enter your phone number.",
+            };
+        }
+
+        if (!isValidPhoneNumber(phone)) {
+            return {
+                isValid: false,
+                field: phoneInput,
+                message: "Phone number must contain digits only, with an optional + at the start.",
             };
         }
 
@@ -127,7 +149,7 @@
     }
 
     // Clear corrected field states
-    [nameInput, emailInput, subjectInput, messageInput].forEach((field) => {
+    [nameInput, emailInput, phoneInput, subjectInput, messageInput].forEach((field) => {
         field.addEventListener("input", () => {
             setFieldError(field, false);
 

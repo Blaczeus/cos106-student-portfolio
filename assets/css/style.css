@@ -437,6 +437,11 @@ button {
     mask-image: url("../icons/email.svg");
 }
 
+.whatsapp-icon {
+    -webkit-mask-image: url("../icons/whatsapp.svg");
+    mask-image: url("../icons/whatsapp.svg");
+}
+
 .hero-image-area {
     display: flex;
     justify-content: flex-end;
@@ -1264,6 +1269,26 @@ button {
     background: rgba(17, 26, 21, 0.72);
 }
 
+.contact-options {
+    grid-column: 2;
+    display: grid;
+    gap: var(--space-lg);
+    padding-top: var(--space-lg);
+}
+
+.contact-options h2 {
+    color: var(--text-color);
+    font-size: clamp(1.35rem, 2vw, 1.65rem);
+    font-weight: 600;
+}
+
+.contact-option-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
 .contact-field {
     display: grid;
     gap: 0.55rem;
@@ -1527,6 +1552,10 @@ button {
     .contact-layout {
         grid-template-columns: 1fr;
         padding-block: 3.5rem;
+    }
+
+    .contact-options {
+        grid-column: auto;
     }
 }
 
