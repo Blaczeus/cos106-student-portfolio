@@ -20,26 +20,16 @@ I wanted to build something more than just a simple portfolio, so I combined my 
 - Interactive academic planner
 - Contact page with form validation
 
-## Run Locally
-
-Clone the project
-
-```bash
-git clone https://github.com/Blaczeus/cos106-student-portfolio.git
-```
-
-Then simply open `index.html` in your browser, or use a local server like Live Server.
-
 ## Live Demo
 
-GitHub Pages: *Add your URL here*
+*[GitHub Pages](https://blaczeus.github.io/cos106-student-portfolio/)*
 
 ## Author
 
 **Anya Chidiebere**
 
-- GitHub: https://github.com/Blaczeus
-- LinkedIn: https://www.linkedin.com/in/anya-chidiebere
+- *[GitHub Profile](https://github.com/Blaczeus)*
+- *[LinkedIn](https://www.linkedin.com/in/anya-chidiebere)*
 
 ---
 
